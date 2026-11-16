@@ -1,18 +1,19 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import {Cv} from '../model/cv';
+import { CvItemComponent } from '../cv-item/cv-item.component';
 
 @Component({
-  imports: [],
+  imports: [CvItemComponent],
   selector: 'app-cv-list',
   styleUrl: './cv-list.component.css',
   templateUrl: './cv-list.component.html',
 })
 
 export class CvListComponent {
-  @Input() cvs: Cv[] = [];
-  @Output() selectCv = new EventEmitter<Cv>();
+  cvs = input<Cv[]>([]);
+  selectCv = output<Cv>();
 
-  @Input() selectedCv: Cv | null = null; 
+  selectedCv = input<Cv | null>(null);
 
   onSelect(cv: Cv): void {
     this.selectCv.emit(cv);

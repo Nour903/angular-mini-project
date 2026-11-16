@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { Cv } from '../model/cv';
 
 @Component({
@@ -8,5 +8,5 @@ import { Cv } from '../model/cv';
   templateUrl: './cv-detail.component.html',
 })
 export class CvDetailComponent {
-  @Input() cv: Cv | null = null;
+  cv = input<Cv | null>(null);
 }

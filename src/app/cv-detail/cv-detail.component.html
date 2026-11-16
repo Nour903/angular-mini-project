@@ -1,12 +1,12 @@
-@if (cv) {
+@if (cv(); as c) {
   <div class="card">
-    <img [src]="cv.path" [alt]="cv.firstname">
-    <h2>{{ cv.firstname }} {{ cv.name }}</h2>
-    <p class="job">{{ cv.job }}</p>
+    <img [src]="c.path" [alt]="c.firstname">
+    <h2>{{ c.firstname }} {{ c.name }}</h2>
+    <p class="job">{{ c.job }}</p>
     <dl>
-      <dt>Âge</dt><dd>{{ cv.age }} ans</dd>
-      <dt>CIN</dt><dd>{{ cv.cin }}</dd>
-      <dt>Id</dt><dd>{{ cv.id }}</dd>
+      <dt>Âge</dt><dd>{{ c.age }} ans</dd>
+      <dt>CIN</dt><dd>{{ c.cin }}</dd>
+      <dt>Id</dt><dd>{{ c.id }}</dd>
     </dl>
   </div>
 } @else {
