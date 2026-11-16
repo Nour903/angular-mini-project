@@ -1,0 +1,13 @@
+<h2>Liste des CVs</h2>
+<ul class="cv-list">
+  @for (cv of cvs; track cv.id; let even = $even) {
+    <li class="cv-item"
+        [class.row-even]="even"
+        [class.row-odd]="!even"
+        [class.selected]="cv === selectedCv"
+        (click)="onSelect(cv)">
+      <img [src]="cv.path" [alt]="cv.firstname">
+      <span>{{ cv.firstname }} {{ cv.name }}</span>
+    </li>
+  }
+</ul>

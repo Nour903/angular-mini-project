@@ -1,0 +1,4 @@
+<div class="layout">
+  <app-cv-list class="col" [cvs]="cvs" [selectedCv]="selectedCv" (selectCv)="onSelectCv($event)" />
+  <app-cv-detail class="col" [cv]="selectedCv" />
+</div>

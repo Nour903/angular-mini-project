@@ -1,0 +1,7 @@
+.card { background: #ffffff; border-radius: 6px; padding: 24px; text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,.15); }
+.card img { width: 96px; height: 96px; border-radius: 50%; border: 3px solid #33333397;}
+.job { color: #666; margin-top: 0; }
+dl { display: grid; grid-template-columns: auto auto; gap: 6px 16px; justify-content: center; text-align: left; }
+dt { font-weight: bold; }
+dd { margin: 0; }
+.placeholder { color: #666; font-style: italic; }

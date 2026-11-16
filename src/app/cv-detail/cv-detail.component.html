@@ -1,0 +1,14 @@
+@if (cv) {
+  <div class="card">
+    <img [src]="cv.path" [alt]="cv.firstname">
+    <h2>{{ cv.firstname }} {{ cv.name }}</h2>
+    <p class="job">{{ cv.job }}</p>
+    <dl>
+      <dt>Âge</dt><dd>{{ cv.age }} ans</dd>
+      <dt>CIN</dt><dd>{{ cv.cin }}</dd>
+      <dt>Id</dt><dd>{{ cv.id }}</dd>
+    </dl>
+  </div>
+} @else {
+  <p class="placeholder">Cliquez sur un CV pour voir ses détails.</p>
+}

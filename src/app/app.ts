@@ -1,7 +1,8 @@
 import { Component, signal } from '@angular/core';
+import { CvComponent } from './cv/cv.component';
 
 @Component({
-  imports: [],
+  imports: [CvComponent],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
